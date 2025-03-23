@@ -1,0 +1,115 @@
+/* General Reset and Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+    transition: background-color 0.3s;
+}
+
+.dark-mode {
+    background-color: #121212;
+    color: white;
+}
+
+/* Theme Colors */
+body {
+    background-color: white;
+    color: black;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    color: #FF6F61;
+}
+
+/* Navigation */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 3rem;
+    background-color: #333;
+    color: white;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar .logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    list-style-type: none;
+}
+
+.nav-links li {
+    margin-left: 2rem;
+}
+
+.nav-links a {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: white;
+    transition: color 0.3s;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    background: url('https://via.placeholder.com/1600x900') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    background-attachment: fixed;
+}
+
+.hero-text h1 {
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+/* Section Styling */
+.section {
+    padding: 80px 20px;
+    background-color: #f4f4f4;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 30px;
+    font-size: 2rem;
+}
+
+/* Parallax Effect */
+.hero {
+    background-attachment: fixed;
+}
+
+/* Skills Progress Bar */
+.skills {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.skill {
+    background
