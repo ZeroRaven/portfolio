@@ -1,229 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Amresh Shah | Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
-        }
-
-        body {
-            font-size: 16px;
-            line-height: 1.6;
-            background: #f5f7fa;
-            overflow-x: hidden;
-            color: #333;
-            margin: 0;
-        }
-
-        /* Glassmorphism Background */
-        .glass {
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 10px;
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            padding: 40px;
-        }
-
-        /* Header */
-        header {
-            position: relative;
-            height: 100vh;
-            background: url('https://source.unsplash.com/random/1920x1080') no-repeat center center/cover;
-            color: white;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-        }
-        header h1 {
-            font-size: 4rem;
-            font-weight: 600;
-            margin-bottom: 10px;
-            text-transform: uppercase;
-            text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
-        }
-        header p {
-            font-size: 1.4rem;
-            font-weight: 300;
-            text-shadow: 2px 2px 8px rgba(0,0,0,0.4);
-        }
-
-        /* Section */
-        section {
-            padding: 80px 0;
-            position: relative;
-        }
-
-        .section-title {
-            font-size: 2.5rem;
-            font-weight: 600;
-            text-align: center;
-            margin-bottom: 40px;
-        }
-
-        /* Parallax Effect */
-        .parallax {
-            background: url('https://source.unsplash.com/random/1920x1080') fixed;
-            background-size: cover;
-            padding: 100px 20px;
-            color: white;
-            text-align: center;
-        }
-
-        /* Cards */
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 40px;
-            margin-top: 40px;
-        }
-
-        .project-card {
-            background: rgba(255, 255, 255, 0.3);
-            border-radius: 15px;
-            padding: 30px;
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            transition: transform 0.3s, box-shadow 0.3s;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            height: 100%;
-        }
-        .project-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
-        }
-
-        .project-card h3 {
-            font-size: 1.8rem;
-            margin-bottom: 15px;
-            font-weight: 600;
-        }
-
-        .project-card p {
-            font-size: 1rem;
-            margin-bottom: 20px;
-            line-height: 1.6;
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 12px 30px;
-            background-color: #6e8efb;
-            color: white;
-            border-radius: 30px;
-            font-weight: 500;
-            text-decoration: none;
-            transition: background 0.3s;
-        }
-        .btn:hover {
-            background-color: #a777e3;
-        }
-
-        /* Footer */
-        footer {
-            background-color: #333;
-            color: white;
-            padding: 30px 20px;
-            text-align: center;
-        }
-
-        .social-icons a {
-            margin: 0 12px;
-            color: white;
-            font-size: 2rem;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
-        .social-icons a:hover {
-            color: #6e8efb;
-        }
-
-        /* Media Queries */
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 2.5rem;
-            }
-            .section-title {
-                font-size: 2rem;
-            }
-        }
-    </style>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Amresh Shah - Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollreveal/4.0.7/scrollreveal.min.js"></script>
 </head>
-<body>
 
-    <header>
-        <div>
-            <h1>Amresh Shah</h1>
-            <p>Web Developer | Content Creator | Digital Storyteller</p>
+<body>
+    <!-- Light/Dark Mode Toggle -->
+    <div id="theme-toggle">
+        <button id="toggle-btn">🌙</button>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">Amresh Shah</div>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section with Parallax Effect -->
+    <header class="hero">
+        <div class="hero-text">
+            <h1>Welcome to My Portfolio</h1>
+            <p>Explore my journey, projects, and skills</p>
         </div>
     </header>
 
-    <section id="about" class="glass">
-        <h2 class="section-title">About Me</h2>
-        <p>
-            I am a motivated, conscientious, and visionary individual driven by a passion for self-learning and acquiring new skills.
-            I love leveraging technology to tell stories, create solutions, and make an impact. With a background in Computer Engineering,
-            I specialize in web development, video production, and content creation.
-        </p>
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2>About Me</h2>
+            <p>I am a motivated, conscientious, and visionary undergraduate student dedicated to making a positive impact on society through self-learning and innovation.</p>
+            <p>Location: Purano Thimi, Bhaktapur</p>
+            <p>Contact: amresh.shah@live.com | 9813443841</p>
+        </div>
     </section>
 
-    <section id="projects" class="parallax">
-        <h2 class="section-title">Projects</h2>
-        <div class="projects-grid">
-            <div class="project-card">
-                <h3>Pratibimba: The Other Side of Climate Crisis</h3>
-                <p>A virtual and physical photography exhibition addressing climate crisis and housing injustice. The exhibition attracted over 200 visitors and sparked meaningful dialogue on climate and housing issues.</p>
-                <a href="#" class="btn">View Project</a>
+    <!-- Experience Section -->
+    <section id="experience" class="section">
+        <div class="container">
+            <h2>Experience</h2>
+            <div class="experience-item">
+                <h3>ALIN and ALL IN Foundation</h3>
+                <p>Technical Officer & Founding Board Member (2022 - Present)</p>
+                <ul>
+                    <li>Led graphic design, video production, and outreach initiatives.</li>
+                    <li>Spearheaded fundraising and built a WordPress-based donation platform.</li>
+                </ul>
             </div>
-            <div class="project-card">
-                <h3>Leapfrog Technology Hackathon</h3>
-                <p>Spearheaded a college team to develop a news portal website during the hackathon. Recognized for exceptional documentation and presentation during the competition.</p>
-                <a href="#" class="btn">View Project</a>
-            </div>
-            <div class="project-card">
-                <h3>Tell Your Tale: Mental Health Podcast</h3>
-                <p>A podcast that shares success stories of youth from diverse backgrounds, focusing on mental health. The podcast reached over 100,000 listeners per episode.</p>
-                <a href="#" class="btn">View Project</a>
+            <div class="experience-item">
+                <h3>University of Victoria INSPIRE Program</h3>
+                <p>Apprentice Garage Fellow (2024 - 2025)</p>
+                <ul>
+                    <li>Developed data management systems with ASP.NET Core and React.</li>
+                    <li>Facilitated cross-cultural collaboration through monthly team meetings.</li>
+                </ul>
             </div>
         </div>
     </section>
 
-    <section id="skills" class="glass">
-        <h2 class="section-title">Skills</h2>
-        <ul>
-            <li>Web Development (HTML, CSS, JavaScript, React, ASP.NET Core)</li>
-            <li>Video & Audio Production</li>
-            <li>Graphic Design (Photoshop, Illustrator)</li>
-            <li>Project Management & Fundraising</li>
-            <li>Content Creation & Social Media Strategy</li>
-            <li>Data Collection & Analysis (KoBoToolbox, KoBoCollect)</li>
-        </ul>
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+        <div class="container">
+            <h2>Projects</h2>
+            <div class="project-item">
+                <h3>Pratibimba: The Otherside of Climate Crisis</h3>
+                <p>Secured a $2,000 micro-grant to address climate crisis and housing injustice. Organized workshops for marginalized youth and exhibited their photographic narratives.</p>
+            </div>
+            <div class="project-item">
+                <h3>SOCHAI Youth Innovation Challenge</h3>
+                <p>Led a team to address SDG 2 (Zero Hunger) and secured NRs. 20,000 for project implementation, focusing on indigenous crops and food security.</p>
+            </div>
+        </div>
     </section>
 
-    <section id="contact">
-        <div class="glass">
-            <h2 class="section-title">Contact</h2>
-            <p>You can reach me at <a href="mailto:amresh.shah@live.com">amresh.shah@live.com</a></p>
-            <div class="social-icons">
-                <a href="https://www.linkedin.com/in/amreshah/" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <a href="https://github.com/amreshshah" target="_blank"><i class="fab fa-github"></i></a>
+    <!-- Skills Section -->
+    <section id="skills" class="section">
+        <div class="container">
+            <h2>Skills</h2>
+            <div class="skills">
+                <div class="skill">
+                    <h4>Leadership & Teamwork</h4>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 90%;"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <h4>Communication & Public Speaking</h4>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 80%;"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <h4>Project Management</h4>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 85%;"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <h4>Video & Audio Editing</h4>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 75%;"></div>
+                    </div>
+                </div>
             </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="container">
+            <h2>Contact</h2>
+            <form id="contact-form" method="POST">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Your Email</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Your Message</label>
+                <textarea id="message" name="message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
         </div>
     </section>
 
     <footer>
-        <p>&copy; 2025 Amresh Shah. All Rights Reserved.</p>
+        <p>&copy; 2025 Amresh Shah. All rights reserved.</p>
     </footer>
 
+    <!-- Scripts -->
+    <script>
+        // Light/Dark Mode Toggle
+        const toggleBtn = document.getElementById('toggle-btn');
+        const body = document.body;
+        
+        toggleBtn.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            toggleBtn.textContent = body.classList.contains('dark-mode') ? '🌞' : '🌙';
+        });
+
+        // Scroll Reveal Animation
+        ScrollReveal().reveal('.section', { delay: 500, distance: '50px', easing: 'ease-in-out' });
+    </script>
 </body>
+
 </html>
